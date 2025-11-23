@@ -20,7 +20,7 @@ Documentation = st.Page(
 # )
 
 coil_page = st.Page(
-    page="Pages/coil.py",
+    page="Pages/Coil.py",
     title= "Coil",
     icon= ":material/bolt:",
 )
