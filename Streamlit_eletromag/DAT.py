@@ -1,4 +1,7 @@
 import streamlit as st
+import os  
+
+current_dir = os.path.dirname(os.path.abspath(__file__))
 
 # st.set_page_config(page_title="My Package App", page_icon="🧙🏼‍♂️")
 
@@ -24,10 +27,9 @@ coil_page = st.Page(
     title= "Coil",
     icon= ":material/bolt:",
 )
-IMG_PATH = "assets/Ilum.png"   # ajuste o caminho se estiver em outra pasta, ex: "assets/Ilum.png"
+IMG_PATH = os.path.join(current_dir, "assets", "Ilum.png")
 
 with st.sidebar:
-    # imagem no topo da sidebar
     st.image(IMG_PATH, use_container_width=True)
 
 pg = st.navigation({
